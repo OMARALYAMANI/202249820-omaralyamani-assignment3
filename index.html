@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Advanced portfolio web application with API integration, filtering, sorting, state management, and performance optimizations." />
+  <title>Omar Alyamani | Assignment 3 Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="#top">MyPortfolio</a>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#github">GitHub</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="themeBtn" class="theme-btn" type="button" aria-label="Toggle theme">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <p id="greeting" class="greeting"></p>
+        <h1>Hi, I’m <span class="accent">OMAR ALYAMANI</span></h1>
+        <p class="tagline">
+          Aspiring Web Developer building responsive, interactive, and user-friendly web applications with HTML, CSS, and JavaScript.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#projects">Explore Projects</a>
+          <button id="saveNameBtn" class="btn btn-secondary" type="button">Save Visitor Name</button>
+        </div>
+        <p id="visitorMessage" class="visitor-message">Welcome to my portfolio.</p>
+        <div class="stats-row">
+          <div class="stat-card">
+            <span class="stat-label">Time on site</span>
+            <strong id="visitTimer">00:00</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Selected level</span>
+            <strong id="selectedLevelLabel">All Visitors</strong>
+          </div>
+        </div>
+      </div>
+      <img
+        class="hero-image"
+        src="assets/images/profile-placeholder.svg"
+        alt="Illustration placeholder for Omar Alyamani portfolio"
+        width="320"
+        height="320"
+        loading="eager"
+        decoding="async"
+      />
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <img
+          class="profile"
+          src="assets/images/profile-placeholder.svg"
+          alt="Profile placeholder"
+          width="160"
+          height="160"
+          loading="lazy"
+          decoding="async"
+        />
+        <div>
+          <p>
+            I am a passionate student learning web development and building a strong foundation in HTML, CSS, and JavaScript. I enjoy creating clean, responsive websites and continuously improving my technical skills.
+          </p>
+          <p>
+            My goal is to become a professional developer and build useful, user-friendly web applications that solve real problems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-heading">
+        <div>
+          <h2>Projects</h2>
+          <p class="section-note">This section demonstrates advanced logic with filtering, sorting, and level-based recommendations.</p>
+        </div>
+      </div>
+
+      <div class="controls card">
+        <label>
+          Category
+          <select id="categoryFilter">
+            <option value="all">All Projects</option>
+            <option value="web">Web</option>
+            <option value="javascript">JavaScript</option>
+            <option value="ui">UI/UX</option>
+          </select>
+        </label>
+
+        <label>
+          Sort By
+          <select id="sortProjects">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="title">Title A-Z</option>
+          </select>
+        </label>
+
+        <label>
+          Visitor Level
+          <select id="levelFilter">
+            <option value="all">All Visitors</option>
+            <option value="beginner">Beginner</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="projectHighlights" class="highlight-box card"></div>
+      <div id="projectsGrid" class="projects-grid"></div>
+      <p id="projectCount" class="section-note"></p>
+    </section>
+
+    <section id="github" class="section">
+      <div class="section-heading">
+        <div>
+          <h2>Live GitHub Repositories</h2>
+          <p class="section-note">This section fetches public repositories from the GitHub API and handles loading and error states.</p>
+        </div>
+        <button id="reloadReposBtn" class="btn btn-secondary" type="button">Reload Repositories</button>
+      </div>
+
+      <div id="repoStatus" class="form-status">Loading repositories...</div>
+      <div id="repoGrid" class="projects-grid"></div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p class="section-note">The form validates multiple conditions before allowing submission.</p>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <label>
+          Name
+          <input type="text" id="name" name="name" required minlength="2" />
+        </label>
+
+        <label>
+          Email
+          <input type="email" id="email" name="email" required />
+        </label>
+
+        <label>
+          Subject
+          <input type="text" id="subject" name="subject" required minlength="3" />
+        </label>
+
+        <label>
+          Message
+          <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+        </label>
+
+        <button class="btn" type="submit">Submit</button>
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> OMAR ALYAMANI. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

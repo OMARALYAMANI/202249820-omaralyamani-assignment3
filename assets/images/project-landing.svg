@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360">
+  <rect width="600" height="360" rx="24" fill="#111c3a"/>
+  <rect x="40" y="40" width="520" height="40" rx="12" fill="#0f172a" stroke="#38bdf8"/>
+  <rect x="40" y="100" width="250" height="180" rx="20" fill="#38bdf8" opacity="0.15" stroke="#38bdf8"/>
+  <rect x="310" y="100" width="250" height="80" rx="20" fill="#0f172a" stroke="#38bdf8"/>
+  <rect x="310" y="200" width="250" height="80" rx="20" fill="#0f172a" stroke="#38bdf8"/>
+  <text x="40" y="325" font-size="30" font-family="Arial, sans-serif" fill="#e2e8f0">Responsive Landing Page</text>
+</svg>

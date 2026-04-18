@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360">
+  <rect width="600" height="360" rx="24" fill="#111c3a"/>
+  <text x="40" y="60" font-size="32" font-family="Arial, sans-serif" fill="#38bdf8">Portfolio Dashboard</text>
+  <rect x="40" y="90" width="120" height="210" rx="18" fill="#0f172a" stroke="#38bdf8"/>
+  <rect x="180" y="90" width="160" height="90" rx="18" fill="#0f172a" stroke="#38bdf8"/>
+  <rect x="360" y="90" width="200" height="90" rx="18" fill="#0f172a" stroke="#38bdf8"/>
+  <rect x="180" y="200" width="380" height="100" rx="18" fill="#0f172a" stroke="#38bdf8"/>
+  <polyline points="210,265 260,240 310,250 360,210 420,228 500,180" fill="none" stroke="#22c55e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
