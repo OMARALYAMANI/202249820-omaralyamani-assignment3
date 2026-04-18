@@ -1,4 +1,4 @@
-# id-name-assignment3
+# 202249820-OMAR ALYAMANI-assignment3
 
 ## Project Description
 This project is an advanced personal portfolio web application created for Assignment 3. It builds on the earlier portfolio assignments by adding external API integration, more advanced JavaScript logic, state management, performance improvements, and updated documentation.
